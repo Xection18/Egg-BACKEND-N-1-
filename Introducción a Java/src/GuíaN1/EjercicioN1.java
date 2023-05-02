@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package introducción.a.java;
+package GuíaN1;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Xecti
  */
-public class GuíaDeEjerciciosNúmero2 {
+public class EjercicioN1 {
 
     /**
      * @param args the command line arguments

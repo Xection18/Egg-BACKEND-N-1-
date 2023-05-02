@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package introducción.a.java;
+package IntroJava;
 
 import java.util.Scanner;
 
@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author Xecti
  */
-public class IntroducciónAJava {
+public class Intro {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+          // TODO code application logic here
         String palabraOculta;
         char caracterMagico;
         boolean esDeColorVerde;
