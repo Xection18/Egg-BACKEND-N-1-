@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package IntroJava;
+package GuíaN1;
 
 import java.util.Scanner;
 
@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author Xecti
  */
-public class Intro {
+public class IntroJava {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-          // TODO code application logic here
+        // TODO code application logic here
         String palabraOculta;
         char caracterMagico;
         boolean esDeColorVerde;
@@ -47,7 +47,6 @@ public class Intro {
         System.out.println("¿Le gusto todo lo que usted vió hasta ahora?");
         respuesta = leer.next();
         System.out.println("Hola, Johann. Veo que " + respuesta + " le ha gustado lo que vió hasta ahora");
-        
     }
     
 }
