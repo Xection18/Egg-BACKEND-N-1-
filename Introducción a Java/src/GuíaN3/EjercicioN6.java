@@ -101,7 +101,7 @@ public class EjercicioN6 {
                 }
                         
         }
-       } while (eleccion == 'n' || eleccion == 'N');
+       } while ((eleccion == 'n' || eleccion == 'N') || opcion >= 1 && opcion < 5 );
     }
  
 }
