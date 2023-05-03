@@ -5,6 +5,8 @@
  */
 package GuíaN3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Xection
@@ -30,7 +32,27 @@ public class EjercicioN7 {
         ejercicio deberá investigar cómo se utilizan las siguientes funciones
         de Java Substring(), Length(), equals().
         */
+        Scanner leer = new Scanner (System.in);
+        String cadena;
         
+        do {
+            System.out.println("Ingrese una cadena de formato fijo 5, comenzada con X y terminada en O. Ingrese &&&&& para terminar");
+            cadena = leer.nextLine();
+                
+            if (cadena.length() == 5 && cadena.equals("&&&&&")) {
+                System.out.println("Finalizando...");
+            }       
+            else if (cadena.length() != 5 && ! cadena.startsWith("X") || ! cadena.endsWith("O")) {
+                System.out.println("Incorrecto, ingreso una cadena inválida");
+            }
+            else if (cadena.length() == 5 && ! cadena.startsWith("X") || ! cadena.endsWith("O")) {
+                System.out.println("Incorrecto, ingreso una cadena inválida");
+            }
+            else if (cadena.length() == 5 && cadena.startsWith("X") && cadena.endsWith("O")) {
+                System.out.println("Correcto, ingreso una cadena válida");
+            }
+            
+        } while (! cadena.equals("&&&&&"));
     }
     
 }
