@@ -34,6 +34,7 @@ public class EjercicioN7 {
         */
         Scanner leer = new Scanner (System.in);
         String cadena;
+        int contador = 0;
         
         do {
             System.out.println("Ingrese una cadena de formato fijo 5, comenzada con X y terminada en O. Ingrese &&&&& para terminar");
@@ -41,6 +42,7 @@ public class EjercicioN7 {
                 
             if (cadena.length() == 5 && cadena.equals("&&&&&")) {
                 System.out.println("Finalizando...");
+                contador = contador + 1;
             }       
             else if (cadena.length() != 5 && ! cadena.startsWith("X") || ! cadena.endsWith("O")) {
                 System.out.println("Incorrecto, ingreso una cadena inválida");
@@ -50,9 +52,12 @@ public class EjercicioN7 {
             }
             else if (cadena.length() == 5 && cadena.startsWith("X") && cadena.endsWith("O")) {
                 System.out.println("Correcto, ingreso una cadena válida");
+                contador = contador + 1;
             }
             
         } while (! cadena.equals("&&&&&"));
+        
+        System.out.println("La cantidad de cadenas leídas es de: " + contador);
     }
     
 }
