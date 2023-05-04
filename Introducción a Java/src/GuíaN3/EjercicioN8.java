@@ -5,6 +5,8 @@
  */
 package GuíaN3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Xecti
@@ -26,7 +28,52 @@ public class EjercicioN8 {
         * * * *
         
         */
+        Scanner leer = new Scanner (System.in);
+        System.out.println("Ingrese el tamaño del cuadrado: ");
+        int tamaño = leer.nextInt();
         
+        for (int i = 1; i <= tamaño; i++) {
+            if ( i == 1 || i == tamaño ) {
+                for (int j = 1; j <= tamaño; j++) {
+                    System.out.print("*  ");
+                }
+                System.out.println("");
+            }
+            else {
+                System.out.print("*  ");
+                for (int j = 1; j <= tamaño - 2; j++){
+                    System.out.print("   ");
+                }
+                System.out.println("*");
+            }
+        }
+//     Para i = 1 Hasta tamanoDelLado Con Paso 1 Hacer
+//		
+//		Si (i = 1) O (i = tamanoDelLado) Entonces
+//			
+//			Para j = 1 Hasta tamanoDelLado Con Paso 1 Hacer
+//				
+//				Escribir Sin Saltar "*  "
+//				
+//			FinPara
+//			
+//			Escribir ""
+//			
+//		SiNo
+//			
+//			Escribir Sin Saltar "*  "
+//			
+//            Para j = 1 hasta tamanoDelLado - 2 Con Paso 1 Hacer
+//				
+//                Escribir Sin Saltar "   "
+//				
+//            FinPara
+//			
+//            Escribir "*"
+//			
+//		FinSi
+//		
+//	FinPara
     }
     
 }
