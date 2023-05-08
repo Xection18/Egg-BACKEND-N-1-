@@ -5,6 +5,8 @@
  */
 package GuíaN4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Xecti
@@ -33,6 +35,50 @@ public class EjercicioN4 {
         71, 73, 79, 83, 89 y 97.
         
         */
+        Scanner leer = new Scanner (System.in);
+        int numero = 0;
+        
+        while (numero <= 0) {
+            System.out.println("Ingrese un número natural mayor al cero: ");
+            numero = leer.nextInt();
+        }
+        
+        boolean resultado = esPrimoElNumero_(numero);
+        
+        if (resultado == true) {
+            System.out.println("El resultado es VERDADERO");
+        }
+        else {
+            System.out.println("El resutlado es FALSO");
+        }
     }
     
+    public static boolean esPrimoElNumero_(int numero) {
+        boolean esUnNumeroNaturalMayorOIgualADos = numero >= 2;
+        boolean esDivisibleEntreSiMismo = numero % numero == 0;
+        boolean esDivisibleEntreUno = numero / 1 == numero;
+        
+        int contadorDeDivisores = 0;
+        for (int i = numero; i >= 1; i-- ) {
+            
+            if (esDivisible_PorElNumero_(numero, i)) {
+                contadorDeDivisores = contadorDeDivisores + 1;
+            }
+        }
+        
+        if (esUnNumeroNaturalMayorOIgualADos) {
+            if (esDivisibleEntreSiMismo && esDivisibleEntreUno) {
+                if (contadorDeDivisores == 2) {
+                    return true;
+                }
+            }
+        }
+       
+        return false;
+    }
+    
+    public static boolean esDivisible_PorElNumero_(int dividendo, int divisor) {
+        boolean esDivisible = dividendo % divisor == 0;
+        return esDivisible;
+    }
 }
