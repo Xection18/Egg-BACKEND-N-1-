@@ -20,6 +20,7 @@ public class EjercicioN4 {
         aleatorios y muestre la traspuesta de la matriz. La matriz
         traspuesta de una matriz A se denota por B y se obtiene
         cambiando sus filas por columnas (o viceversa).
+        HECHO
 
         */
         int [][] matrizOriginal = new int [4][4];
