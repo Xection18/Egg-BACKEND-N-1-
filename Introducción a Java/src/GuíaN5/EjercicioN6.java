@@ -49,144 +49,34 @@ public class EjercicioN6 {
                         System.out.println("Debe ingresar números del 1 al 9");
                     }
                 } while (numero < 1 || numero > 10);
-                
             }
+            System.out.println("Siguiente fila");
         }
     }
     
     public static void VerificarSiLaMatriz_EsMágica(int matrizAVerificar[][]) {
-        int primerFila = 0;
-        int segundaFila= 0;
-        int tercerFila = 0;
+        int filaNumeroUno = matrizAVerificar[0][0] + matrizAVerificar[0][1] + matrizAVerificar[0][2];
+        int filaNumeroDos = matrizAVerificar[1][0] + matrizAVerificar[1][1] + matrizAVerificar[1][2];
+        int filaNumeroTres = matrizAVerificar[2][0] + matrizAVerificar[2][1] + matrizAVerificar[2][2];
         
-        int primerColumna = 0;
-        int segundaColumna = 0;
-        int tercerColumna = 0;
+        int columnaNumeroUno = matrizAVerificar[0][0] + matrizAVerificar[1][0] + matrizAVerificar[2][0];
+        int columnaNumeroDos = matrizAVerificar[0][1] + matrizAVerificar[1][1] + matrizAVerificar[2][1];
+        int columnaNumeroTres = matrizAVerificar[0][2] + matrizAVerificar[1][2] + matrizAVerificar[2][2];
         
-        int primerDiagonal = 0;
-        int segundaDiagonal = 0;
+        int sumaDePrimerDiagonal = matrizAVerificar[0][0] + matrizAVerificar[1][1] + matrizAVerificar[2][2];
+        int sumaDeSegundaDiagonal = matrizAVerificar[0][2] + matrizAVerificar[1][1] + matrizAVerificar[2][0];
         
+        boolean esIgualElNumeroDeFilas = filaNumeroUno == filaNumeroDos && filaNumeroDos == filaNumeroTres;
+        boolean esIgualElNumeroDeColumnas = columnaNumeroUno == columnaNumeroDos && columnaNumeroDos == columnaNumeroTres;
+        boolean esIgualElNumeroDeDiagonales = sumaDePrimerDiagonal == sumaDeSegundaDiagonal;
         
-        int sumaDeFilas = primerFila + segundaFila + tercerFila;
-        int sumaDeColumnas = primerColumna + segundaColumna + tercerColumna;
-        int sumaDeDiagonales = primerDiagonal + segundaDiagonal;
-        
-        for (int i = 0; i < matrizAVerificar.length; i++) {
-            for (int j = 0; j < matrizAVerificar.length; j++) {
-                
-                ////////////////////////SUMA DE FILAS//////////////////////////
-                if (i == 0 && j == 0) {
-                    primerFila = primerFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 0 && j == 1) {
-                    primerFila = primerFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 0 && j == 2) {
-                    primerFila = primerFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 0) {
-                    segundaFila = segundaFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 1) {
-                    segundaFila = segundaFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 2) {
-                    segundaFila = segundaFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 0) {
-                    tercerFila = tercerFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 1) {
-                    tercerFila = tercerFila + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 2) {
-                    tercerFila = tercerFila + matrizAVerificar[i][j];
-                }
-                
-                ////////////////////////SUMA DE COLUMNAS///////////////////////
-                
-                if (i == 0 && j == 0) {
-                    primerColumna = primerColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 0) {
-                    primerColumna = primerColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 0) {
-                    primerColumna = primerColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 0 && j == 1) {
-                    segundaColumna = segundaColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 1) {
-                    segundaColumna = segundaColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 1) {
-                    segundaColumna = segundaColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 0 & j == 2) {
-                    tercerColumna = tercerColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 2) {
-                    tercerColumna = tercerColumna + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 2) {
-                    tercerColumna = tercerColumna + matrizAVerificar[i][j];
-                }
-                
-                ////////////////////////SUMA DE DIAGONALES/////////////////////
-                
-                if (i == 0 && j == 0) {
-                    primerDiagonal = primerDiagonal + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 1) {
-                    primerDiagonal = primerDiagonal + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 2) {
-                    primerDiagonal = primerDiagonal + matrizAVerificar[i][j];
-                }
-                
-                if (i == 2 && j == 0) {
-                    segundaDiagonal = segundaDiagonal + matrizAVerificar[i][j];
-                }
-                
-                if (i == 1 && j == 1) {
-                    segundaDiagonal = segundaDiagonal + matrizAVerificar[i][j];
-                }
-                
-                if (i == 0 && j == 2) {
-                    segundaDiagonal = segundaDiagonal + matrizAVerificar[i][j];
-                }
-            }
-        }
-        
-        System.out.println(sumaDeColumnas);
-        System.out.println(sumaDeDiagonales);
-        System.out.println(sumaDeFilas);
-        
-        if (sumaDeColumnas == sumaDeDiagonales && sumaDeColumnas == sumaDeFilas) {
+        if (esIgualElNumeroDeFilas && esIgualElNumeroDeColumnas && esIgualElNumeroDeDiagonales) {
             System.out.println("Es una matriz mágica");
         }
         else {
             System.out.println("No es una matriz mágica");
         }
     }
+    
 }
  
