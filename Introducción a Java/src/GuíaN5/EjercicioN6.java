@@ -77,6 +77,5 @@ public class EjercicioN6 {
             System.out.println("No es una matriz mágica");
         }
     }
-    
 }
  
