@@ -42,9 +42,9 @@ public class EjercicioN1 {
         System.out.println("Ingrese el ISBN: ");
         int isbn = read.nextInt();
         System.out.println("Ingrese el título: ");
-        String título = read.nextLine();
+        String título = read.next();
         System.out.println("Ingrese el autor: ");
-        String autor = read.nextLine();
+        String autor = read.next();
         System.out.println("Ingrese el númeroDePáginas");
         int númeroDePáginas = read.nextInt();
         System.out.println("Cargando libro...");
@@ -54,7 +54,15 @@ public class EjercicioN1 {
     
     public static void cargarLibroISBN_Título_Autor_NúmeroDePáginas(int isbn, String título, String autor, int númeroDePáginas) {
         Libro nuevoLibro = new Libro(isbn, título, autor, númeroDePáginas);
+        MostrarInformaciónSobreElLibro_(nuevoLibro);
         
+    }
+    
+    public static void MostrarInformaciónSobreElLibro_(Libro libro) {
+        System.out.println("ISBN: " + libro.getIsbn());
+        System.out.println("Título: " + libro.getTítulo());
+        System.out.println("Autor: " + libro.getAutor());
+        System.out.println("Número de páginas" + libro.getNúmeroDePáginas());
     }
     
 }

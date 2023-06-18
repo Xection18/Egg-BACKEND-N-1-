@@ -33,6 +33,26 @@ public class Libro {
     this.título = título;
     this.autor = autor;
     this.númeroDePáginas = númeroDePáginas;
-
+    
     }
+    
+    public int getIsbn() {
+        return isbn;
+    }
+    
+    public String getTítulo() {
+        return título;
+    }
+    
+    public String getAutor() {
+        return autor;
+    }
+    
+    public int getNúmeroDePáginas() {
+        return númeroDePáginas;
+    }
+    
 }
+
+
+
