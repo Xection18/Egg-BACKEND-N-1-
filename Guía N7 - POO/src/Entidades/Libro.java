@@ -19,16 +19,19 @@ el número de ISBN, el título, el autor del libro y el número de páginas.
  * @author Johann
  */
 public class Libro {
-    public int isbn;
+    public String isbn;
     public String título;
     public String autor;
     public int númeroDePáginas;
     
     public Libro() {
-
+        this.isbn = "";
+        this.título = "";
+        this.autor = "";
+        this.númeroDePáginas = 0;
     }
     
-    public Libro(int isbn, String título, String autor, int númeroDePáginas) {
+    public Libro(String isbn, String título, String autor, int númeroDePáginas) {
     this.isbn = isbn;
     this.título = título;
     this.autor = autor;
@@ -36,7 +39,7 @@ public class Libro {
     
     }
     
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
     

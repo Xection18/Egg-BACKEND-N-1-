@@ -40,29 +40,33 @@ public class EjercicioN1 {
         
         System.out.println("Okay, " + nombre + " " + apellido + ". Ahora debera cargar el libro suyo");
         System.out.println("Ingrese el ISBN: ");
-        int isbn = read.nextInt();
+        String isbn = read.nextLine();
+        
         System.out.println("Ingrese el título: ");
-        String título = read.next();
+        String título = read.nextLine();
         System.out.println("Ingrese el autor: ");
-        String autor = read.next();
+        String autor = read.nextLine();
         System.out.println("Ingrese el númeroDePáginas");
         int númeroDePáginas = read.nextInt();
         System.out.println("Cargando libro...");
+        
+        read.close();
                 
         cargarLibroISBN_Título_Autor_NúmeroDePáginas(isbn, título, autor, númeroDePáginas);
     }
     
-    public static void cargarLibroISBN_Título_Autor_NúmeroDePáginas(int isbn, String título, String autor, int númeroDePáginas) {
+    public static void cargarLibroISBN_Título_Autor_NúmeroDePáginas(String isbn, String título, String autor, int númeroDePáginas) {
         Libro nuevoLibro = new Libro(isbn, título, autor, númeroDePáginas);
         MostrarInformaciónSobreElLibro_(nuevoLibro);
         
     }
     
     public static void MostrarInformaciónSobreElLibro_(Libro libro) {
+        System.out.println("Su libro quedo cargado con estos datos: ");
         System.out.println("ISBN: " + libro.getIsbn());
         System.out.println("Título: " + libro.getTítulo());
         System.out.println("Autor: " + libro.getAutor());
-        System.out.println("Número de páginas" + libro.getNúmeroDePáginas());
+        System.out.println("Número de páginas: " + libro.getNúmeroDePáginas());
     }
     
 }
