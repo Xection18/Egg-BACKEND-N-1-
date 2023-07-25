@@ -24,13 +24,37 @@ public class EjercicioN2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        crearCircunferencia();
+        Circunferencia unaCircunferencia = new Circunferencia();
+        crearCircunferencia_(unaCircunferencia);
+        areaDeLaCircunferencia_(unaCircunferencia);
+        perimetroDeLaCircunferencia_(unaCircunferencia);
     }
     
     
-    public static void crearCircunferencia() {
-        System.out.println("Hola, ingrese el radio de la circunferencia para guardarlo en memoria.");
+    public static void crearCircunferencia_(Circunferencia unaCircunferencia) {
         Scanner read = new Scanner (System.in);
-        Circunferencia.setRadio(read.nextDouble());
+        System.out.println("Ingrese el radio de la circunferencia para guardarlo en memoria.");
+        double radio;
+        radio = read.nextDouble();
+        
+        unaCircunferencia.setRadio(radio);
+        
+    }
+    
+    public static void areaDeLaCircunferencia_(Circunferencia unaCircunferencia) {
+        System.out.println("Ahora calcularemos el área de la circunfencia con este cálculo: Área = ( π * radio ) ^ 2");
+        double area;
+        
+        area = (Math.PI * unaCircunferencia.getRadio()) * (Math.PI * unaCircunferencia.getRadio());
+        System.out.println("El área es: " + area);
+    }
+    
+    public static void perimetroDeLaCircunferencia_(Circunferencia unaCircunferencia) {
+        System.out.println("Ahora calcularemos el perimetro con este cálculo: Perímetro = 2 * π * radio");
+        double perímetro;
+        
+        perímetro = 2 * Math.PI * unaCircunferencia.getRadio();
+        System.out.println("El perímetro es: " + perímetro);
+                
     }
 }

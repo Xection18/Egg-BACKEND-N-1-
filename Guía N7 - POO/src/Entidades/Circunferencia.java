@@ -12,6 +12,10 @@ package Entidades;
 public class Circunferencia {
     private double radio;
     
+    public Circunferencia() {
+        this.radio = 0;
+    }
+    
     public Circunferencia(double radio) {
         this.radio = radio;
     }
